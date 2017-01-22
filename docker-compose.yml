@@ -1,0 +1,77 @@
+version: '2'
+services:
+  nginx:
+      build: ./nginx
+      links:
+          - node1:node1
+          - node2:node2
+          - node3:node3
+      ports:
+          - "81:80"
+  node1:
+      build: ./node
+      depends_on:
+        - mysql
+        - redis
+      links:
+        - mysql:mysql
+        - redis:redis
+      environment:
+        PORT: 3000
+        NODE_ENV: development
+      ports:
+        - "3000:3000"
+      restart: always
+      volumes:
+        - ./node:/docker
+        - /docker/node_modules
+  node2:
+      build: ./node
+      depends_on:
+        - mysql
+        - redis
+      links:
+        - mysql:mysql.local
+        - redis:redis.local
+
+      environment:
+        NODE_ENV: development
+        RDS_HOSTNAME: mysql
+        REDIS_HOST: redis
+        PORT: 3000
+      restart: always
+  node3:
+      build: ./node
+      depends_on:
+        - mysql
+        - redis
+      links:
+        - mysql:mysql
+        - redis:redis
+      environment:
+        NODE_ENV: development
+        RDS_HOSTNAME: mysql
+        REDIS_HOST: redis
+        PORT: 3000
+      restart: always
+  redis:
+      restart: always
+      image: redis:latest
+      expose:
+        - "6379"
+      ports:
+        - "6379:6379"
+  mysql:
+    image: mysql:5.7.17
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: docker-workflow
+      MYSQL_USER: workflow
+      MYSQL_PASSWORD: workflow
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
