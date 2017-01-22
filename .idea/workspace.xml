@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f651d00-3536-4afd-bf41-0c33e52f9aae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/6b7d1b96-88d5-48cc-a2ed-c362d816ba8f.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/docker-workflow.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="docker-workflow.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -259,12 +265,12 @@
       <option name="presentableId" value="Default" />
       <updated>1485011446394</updated>
       <workItem from="1485011447474" duration="5586000" />
-      <workItem from="1485098794118" duration="8855000" />
+      <workItem from="1485098794118" duration="8916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14441000" />
+    <option name="totallyTimeSpent" value="14502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="24" width="1317" height="744" extended-state="6" />
