@@ -1,6 +1,9 @@
 
 node/node_modules
 .DS_Store
-
+.vcode
 node/npm-debug.log
 .idea/
+demo1
+demo2
+demo3
